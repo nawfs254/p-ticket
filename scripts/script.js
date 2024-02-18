@@ -143,7 +143,7 @@ for (const seat of seats) {
                     coupnInput.removeAttribute('disabled');
                     couponApplyBtn.removeAttribute('disabled');
 
-            
+
                 }
                 else {
                     coupnInput.setAttribute('disabled', '');
@@ -206,21 +206,21 @@ for (const seat of seats) {
                 };
 
                 // next button
-                if(maxCapacity > 0){
-                    
+                if (maxCapacity > 0) {
+
 
                     // check the number input
-                    phoneNumber.onkeyup = function(){
+                    phoneNumber.onkeyup = function () {
                         const phoneNumberValue = phoneNumber.value;
 
-                        if(!Number.isNaN(Number(phoneNumberValue))){
+                        if (!Number.isNaN(Number(phoneNumberValue))) {
                             console.log('hello');
                             document.getElementById('nextBtn').removeAttribute('disabled');
                         }
-                        else{
+                        else {
                             document.getElementById('nextBtn').setAttribute('disabled', '');
                         }
-                        
+
                     }
                 }
 
@@ -279,6 +279,13 @@ for (const seat of seats) {
             // decrease count Total price
             totalPrice -= 550;
             totalPriceEle.innerText = totalPrice;
+
+            grandTotalEle.innerText = totalPrice;
         }
     };
+}
+
+
+function reload() {
+    window.location.reload()
 }
